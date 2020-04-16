@@ -19,9 +19,8 @@ export default function ControlledCarousel() {
     <CarouselWrapper>
       <Carousel activeIndex={count} onSelect={handleSelect}>
         <Carousel.Item >
-          <img
-            width="50px"
-            className="d-block w-25"
+          <img            
+            className="d-block w-15"
             src={logo}
             alt="First slide"
           />
@@ -32,7 +31,7 @@ export default function ControlledCarousel() {
         </Carousel.Item>
         <Carousel.Item >
           <img
-            className="d-block w-25"
+            className="d-block w-15"
             src={logo}
             alt="Second slide"
           />
@@ -44,7 +43,7 @@ export default function ControlledCarousel() {
         </Carousel.Item>
         <Carousel.Item >
           <img
-            className="d-block w-25"
+            className="d-block w-15"
             src={logo}
             alt="Third slide"
           />
