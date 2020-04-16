@@ -1,24 +1,32 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import "./App.css";
 
 
 // Import Components
 import NavBar from "./layout/NavBar";
-import Carousel from "./Carousel";
-import DataFilter from "./Filter";
-import Product from "./Product";
 import Footer from "./layout/Footer";
+import Home from "./Home";
+import Register from "./account/Register";
+import Login from "./account/Login";
 
 function App() {
   return (
     <div className="App">
+    <Router>
      <NavBar />
-     <Carousel />
-     <DataFilter />
-     <Product/>
-     <Footer/>
+     
+       <Switch>
+         
+       <Route exact path ='/' component = {Home}/> 
+        <Route exact path ='/register' component = {Register }/> 
+        <Route exact path ='/login' component = {Login }/> 
+      </Switch>
+    <Footer/>
+     </Router>
     </div>
   );
+
 }
 
 export default App;

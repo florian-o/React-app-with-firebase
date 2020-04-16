@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Carousel,Container} from 'react-bootstrap';
+import {Carousel} from 'react-bootstrap';
 import styled from 'styled-components';
 import logo from "../src/img/tel.png";
 
@@ -64,7 +64,7 @@ export default function ControlledCarousel() {
     
   const Title = styled.p` 
    color:#888;
-   font-size: 2em;
+   font-size: 2em;   
    text-decoration:underline;
    padding:1.5em;
    text-transform: capitalize;
@@ -73,7 +73,8 @@ export default function ControlledCarousel() {
   }    
   `
   const CarouselWrapper = styled.div`
-   max-width:100%;
+   max-width:90%;
+   box-shadow: 10px 10px 5px 0px rgba(209,205,209,1);
    margin:1em auto;
    background-color:#888;
 `
