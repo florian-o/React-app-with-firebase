@@ -1,53 +1,34 @@
-import React from 'react';
+import React,{useContext} from 'react';
 import logo from "../src/img/tel.png";
 import logo2 from "../src/img/tel2.png";
 
+// Import des data
+import {Context} from "./context";
 
 function Product() {
+    const [state] = useContext(Context);
+    
+    console.log(state);       
+
     return (
- 
+        
     <div className="results">
-       <div>  
-      <img src={logo2}/>   
-      <h2 >Phone</h2> 
-      <span>500 $</span>   
+
+    {state.map((item) =>{               
+
+       return(
+        <div>
+      <img src={item.products.img}/>   
+      <h2>{item.products.title}</h2> 
+      <span>{item.products.price} $</span>  
+      <p>*{item.products.info}*</p>
+
+      </div>
+
+       )
+    })} 
     </div>
-    <div>  
-        <img src={logo}/>   
-        <h2 >Phone</h2> 
-        <span>500 $</span>   
-    </div>
-    <div>  
-        <img src={logo}/>   
-        <h2 >Phone</h2> 
-        <span>500 $</span>   
-    </div>
-    <div>  
-        <img src={logo}/>   
-        <h2 >Phone</h2> 
-        <span>500 $</span>   
-    </div>
-    <div>  
-        <img src={logo2}/>   
-        <h2 >Phone</h2> 
-        <span>500 $</span>   
-    </div>
-    <div>  
-        <img src={logo2}/>
-        <h2 >Phone</h2>    
-        <span>500 $</span>   
-    </div>
-    <div>  
-        <img src={logo}/>   
-        <h2 >Phone</h2> 
-        <span>500 $</span>   
-    </div>
-    <div>  
-        <img src={logo}/>   
-        <h2 >Phone</h2> 
-        <span>500 $</span>   
-    </div>
-    </div>
+   
 
     )
 }
